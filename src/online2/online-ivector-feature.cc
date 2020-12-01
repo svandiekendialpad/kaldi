@@ -582,6 +582,10 @@ void OnlineSilenceWeighting::ComputeCurrentTraceback(
 // Instantiate the template OnlineSilenceWeighting::ComputeCurrentTraceback().
 template
 void OnlineSilenceWeighting::ComputeCurrentTraceback<fst::Fst<fst::StdArc> >(
+									     LatticeFasterOnlineDecoderTpl<fst::Fst<fst::StdArc> > &decoder,
+									     bool use_final_probs);
+template
+void OnlineSilenceWeighting::ComputeCurrentTraceback<fst::Fst<fst::StdArc> >(
     const LatticeFasterOnlineDecoderTpl<fst::Fst<fst::StdArc> > &decoder,
     bool use_final_probs);
 template
@@ -593,6 +597,10 @@ void OnlineSilenceWeighting::ComputeCurrentTraceback<fst::VectorGrammarFst >(
     const LatticeFasterOnlineDecoderTpl<fst::VectorGrammarFst > &decoder,
     bool use_final_probs);
 
+template
+void OnlineSilenceWeighting::ComputeCurrentTraceback<fst::Fst<fst::StdArc> >(
+									     LatticeIncrementalOnlineDecoderTpl<fst::Fst<fst::StdArc> > &decoder,
+									     bool use_final_probs);
 template
 void OnlineSilenceWeighting::ComputeCurrentTraceback<fst::Fst<fst::StdArc> >(
     const LatticeIncrementalOnlineDecoderTpl<fst::Fst<fst::StdArc> > &decoder,
